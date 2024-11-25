@@ -7,8 +7,8 @@ interface CameraPageProps {
   };
 }
 
-export default async function CameraPage({ params }: CameraPageProps) {
-  const { id } = await params
+export default function CameraPage({ params }: CameraPageProps) {
+  const { id } = params
   
 
   return (
