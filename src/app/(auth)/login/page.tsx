@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import logo from '../../../../public/orygenlogo.png'; 
 import {useRouter } from "next/navigation";
-import { DiRequirejs } from 'react-icons/di';
+
 
 export default function LoginPage() {
 
