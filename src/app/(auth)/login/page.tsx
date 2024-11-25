@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import logo from '../../../../public/orygenlogo.png'; 
 import {useRouter } from "next/navigation";
+import { DiRequirejs } from 'react-icons/di';
 
 export default function LoginPage() {
 
@@ -16,7 +17,7 @@ export default function LoginPage() {
         <div className="relative h-screen w-screen overflow-hidden">
       {/* Video de fondo */}
       <video
-        src={require('../../../../public/video.mp4')}
+        src='/video.mp4'
         autoPlay
         muted
         loop
