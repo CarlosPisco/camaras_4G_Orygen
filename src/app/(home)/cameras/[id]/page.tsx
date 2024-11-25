@@ -2,9 +2,9 @@ import CameraStats from "@/app/components/CameraStats";
 import CameraView from "@/app/components/CameraView";
 
 interface CameraPageProps {
-  params: Promise<{
+  params: {
     id: string;
-  }>;
+  };
 }
 
 export default async function CameraPage({ params }: CameraPageProps) {
