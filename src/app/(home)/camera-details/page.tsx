@@ -1,16 +1,11 @@
 import CameraStats from "@/app/components/CameraStats";
 import CameraView from "@/app/components/CameraView";
 
-
-
-export default async function CameraPage({ params, }: {params: Promise<{id: string}>}) {
-  const id  = (await params).id
-  
-
+export default function CameraDetails() {
   return (
     <div className="flex flex-col h-full">
       <header className="bg-slate-900 text-white p-4 flex justify-between items-center">
-        <h1 className="text-lg font-bold">Camera ID: {id}</h1>
+        <h1 className="text-lg font-bold">Detalles de la Cámara</h1>
       </header>
 
       <main className="flex-1 bg-gray-100 p-4 flex">

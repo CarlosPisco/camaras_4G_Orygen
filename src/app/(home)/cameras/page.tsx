@@ -11,8 +11,8 @@ export default function CameraDashboard() {
   ]);
   const router = useRouter();
 
-  const handleCameraClick = (id: number) => {
-    router.push(`/cameras/${id}`); // Redirige al enlace de la cámara
+  const handleCameraClick = () => {
+    router.push(`/camera-details`); // Redirige al enlace de la cámara
   };
 
   return (
@@ -29,7 +29,7 @@ export default function CameraDashboard() {
             <div
               key={camera.id}
               className="bg-white text-black rounded-md overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105"
-              onClick={() => handleCameraClick(camera.id)} // Añadido el evento de clic
+              onClick={() => handleCameraClick()} // Añadido el evento de clic
             >
               <img
                 src={camera.src}
