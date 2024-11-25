@@ -4,11 +4,9 @@ import { FaArrowAltCircleDown } from "react-icons/fa";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
-interface CameraStatsProps {
-    cameraId: string;
-  }
+
   
-  export default function CameraStats({ cameraId }: CameraStatsProps) {
+  export default function CameraStats() {
     // Simulación de datos. Esto puede venir de un fetch a tu API.
     const stats = {
       incidents: 5,

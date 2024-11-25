@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function CameraDashboard() {
-  const [cameras, setCameras] = useState([
+  const [cameras] = useState([
     { id: 1, name: "Cámara 1", src: "/ORYGEN.jpeg" },
     { id: 2, name: "Cámara 2", src: "/ORYGEN.jpeg" },
     { id: 3, name: "Cámara 3", src: "/ORYGEN.jpeg" },

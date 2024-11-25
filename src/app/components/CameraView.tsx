@@ -1,8 +1,6 @@
-interface CameraViewProps {
-    cameraId: string;
-  }
+
   
-  export default function CameraView({ cameraId }: CameraViewProps) {
+export default function CameraView() {
     return (
       <div className="relative bg-black aspect-video rounded-md overflow-hidden">
         {/* Video en vivo incrustado con iframe */}
