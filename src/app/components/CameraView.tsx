@@ -6,11 +6,13 @@ export default function CameraView() {
         {/* Video en vivo incrustado con iframe */}
         
         <iframe
-        className="w-full h-full"
-        src="https://www.youtube.com/embed/4hnxKSdKtZI?si=KLNuH5C633CRit8V&autoplay=1&mute=1"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/cdTRCcj4DkU?autoplay=1&mute=1&si=S5A6J7VzpC6S0YOr"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
 
         {/* Anotaciones dinámicas 
