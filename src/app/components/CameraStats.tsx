@@ -1,3 +1,5 @@
+"use client"
+import React, { useState } from "react";
 import { BiReset } from "react-icons/bi";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaArrowAltCircleDown } from "react-icons/fa";
@@ -16,6 +18,7 @@ import { FaArrowAltCircleUp } from "react-icons/fa";
       battery: 80,
     };
   
+    const [zoomLevel, setZoomLevel] = useState<number>(50); // Valor inicial de zoom al 50%
     return (
       <div>
         <h2 className="text-lg font-bold mb-4">Estadísticas</h2>
@@ -35,59 +38,52 @@ import { FaArrowAltCircleUp } from "react-icons/fa";
           <strong>Porcentaje de batería:</strong> {stats.battery} <strong>%</strong>
         </div>
 
-              {/* Controles PTZ */}
-        <div className="mt-6">
+        <div className="mt-6 flex items-center justify-center">
+        {/* Controles PTZ */}
+        <div>
           <h3 className="text-md font-semibold mb-2 text-center">Controles PTZ</h3>
           {/* Contenedor de botones tipo cruz */}
           <div className="grid grid-cols-3 gap-4 w-36 mx-auto">
-            {/* Espaciador vacío en la esquina superior izquierda */}
             <div></div>
-
-            {/* Botón para mover arriba */}
-            <button
-              className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md"
-            >
+            <button className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md">
               <FaArrowAltCircleUp />
             </button>
-
-            {/* Espaciador vacío en la esquina superior derecha */}
             <div></div>
-
-            {/* Botón para mover izquierda */}
-            <button
-              className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md"
-            >
+            <button className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md">
               <FaArrowAltCircleLeft />
             </button>
-
-            {/* Botón central (opcional para centrar/resetear la cámara) */}
-            <button
-              className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md"
-            >
-            <BiReset />
+            <button className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md">
+              <BiReset />
             </button>
-
-            {/* Botón para mover derecha */}
-            <button
-              className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md"
-            >
+            <button className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md">
               <FaArrowAltCircleRight />
             </button>
-
-            {/* Espaciador vacío en la esquina inferior izquierda */}
             <div></div>
-
-            {/* Botón para mover abajo */}
-            <button
-              className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md"
-            >
+            <button className="bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded shadow-md">
               <FaArrowAltCircleDown />
             </button>
-
-            {/* Espaciador vacío en la esquina inferior derecha */}
             <div></div>
           </div>
         </div>
+
+        {/* Barra de Zoom */}
+        <div className="ml-6">
+          <h3 className="text-md font-semibold mb-2 text-center">Zoom</h3>
+          <div className="flex flex-col items-center">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              step="1"
+              value={zoomLevel}
+              onChange={(e) => setZoomLevel(parseInt(e.target.value))}
+              className="w-32"
+            />
+            <span className="mt-2 text-sm">Zoom: {zoomLevel}%</span>
+          </div>
+        </div>
+      </div>
+
 
       </div>
     );
