@@ -39,12 +39,13 @@ export default function Grabaciones() {
             <button className="bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-green-600">
               ▶️
             </button>
-            <button className="bg-red-500 text-white p-2 rounded-full shadow-lg hover:bg-red-600">
-              ⏹️
-            </button>
             <button className="bg-yellow-500 text-white p-2 rounded-full shadow-lg hover:bg-yellow-600">
               ⏸️
             </button>
+            <button className="bg-red-500 text-white p-2 rounded-full shadow-lg hover:bg-red-600">
+              ⏹️
+            </button>
+            
           </div>
         </div>
   

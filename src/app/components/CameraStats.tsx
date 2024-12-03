@@ -23,7 +23,7 @@ import { FaArrowAltCircleUp } from "react-icons/fa";
           <strong>Incidentes detectados:</strong> {stats.incidents}
         </div>
         <div className="mb-2">
-          <strong>Detection Rate:</strong> {stats.detectionRate}%
+          <strong>Índice de detección:</strong> {stats.detectionRate}%
         </div>
         <div className="mb-2">
           <strong>Tiempo de grabación:</strong> {stats.uptime}
@@ -32,7 +32,7 @@ import { FaArrowAltCircleUp } from "react-icons/fa";
           <strong>Memoria usada:</strong> {stats.storageused} <strong> G /128G </strong>
         </div>
         <div className="mb-2">
-          <strong>Porcentaje de bateria:</strong> {stats.battery} <strong>%</strong>
+          <strong>Porcentaje de batería:</strong> {stats.battery} <strong>%</strong>
         </div>
 
               {/* Controles PTZ */}
